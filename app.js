@@ -31,15 +31,12 @@ app.config(($stateProvider, $urlRouterProvider) => {
     }
   });
 
-  $stateProvider.state('grandparent.parent.naughtyChild', {
-    url: '/naughty-child',
+  $stateProvider.state('grandparent.parent.child.grandchild', {
+    url: '/grandchild',
     views: {
-      'head@grandparent': {
-        templateUrl: './templates/child-head.html'
-      },
-      body: {
-        templateUrl: './templates/child-body.html'
-      },
+      '$default.body.head@': {
+        templateUrl: './templates/grandchild.html'
+      }
     }
   });
 
