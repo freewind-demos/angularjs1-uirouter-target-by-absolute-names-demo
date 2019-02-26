@@ -1,9 +1,20 @@
-AngularJS1 "@uirouter" Target View Name by State Demo
-=====================================================
+AngularJS1 "@uirouter" Target By Absolute Names Demo
+====================================================
 
-默认情况下，child state中`views`中给出的view name是parent state产生的。
+```
+views: {
+  '$default.body.head@': {
+    templateUrl: './some.html'
+  }
+}
+```
 
-有时候，我们需要打破这个约定，让child state自己选择target到一个不是由parent state产生的uiview中。
+其中`$default.body.head@`这样理解：
+
+- `@`右边本来应该是state，如果为空白，表示root state
+- 左边的是uiview names，其中`$default`表示一个unnamed的uiview
+
+结合起来，它表示的就是：root state下的`<ui-view/>`下的`<div ui-view='body'/>`下的`<div ui-view='head'/>`
 
 ```
 npm install
