@@ -18,7 +18,7 @@ views: {
 
 ```
 npm install
-npm run demo
+npm start
 ```
 
 Documentation
